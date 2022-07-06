@@ -2,10 +2,9 @@
 
 from Caesar_Cipher_Art import logo
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 
-'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = [chr(n) for n in range(97, 123)]
 
-signs = ['"','!','?','#','$','%','^','&','*','(',')','[',']','{','}',';',':',',','<','.','>','/','-','_','=','+', ' ']
+signs = [chr(n) for n in range(33, 48)] + [chr(n) for n in range(91, 97)] + [chr(n) for n in range(161, 188)]
 
 def caesar(message, shift, direction):
     crypted = []
